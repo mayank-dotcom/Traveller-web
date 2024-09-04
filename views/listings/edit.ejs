@@ -1,0 +1,100 @@
+<% layout("/layouts/bootstrap") %>
+
+<div class = "offset-2">
+    <h1>Editing Section</h1>
+    
+    <form action="/listings/edited/<%= listing._id %>?_method=PUT" method="post" novalidate class="row g-3 needs-validation" enctype="multipart/form-data">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Title</label>
+            <br>
+            <input name="listing[title]" placeholder="Enter something catchy" type="text" class="form-control" id="inputEmail4" value="<%= listing.title %> " required>
+            <div class="valid-feedback">Title looks good</div>
+            <div class="invalid-feedback">
+              Please enter a valid title.
+            </div>
+          </div>
+         
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Description</label>
+            <br>
+            <textarea type="text" name="listing[description]" class="form-control" id="inputAddress" placeholder="What's different about it ?" required><%= listing.description %></textarea>
+            <div class="valid-feedback">Description looks good</div>
+            <div class="invalid-feedback">
+              Please enter some description.
+            </div>
+          </div>
+          <div>
+            <label for="inputCategory" class="form-label">Category</label>
+            <br>
+            <select name="listing[category]" id="inputState" class="form-select" required>
+              <option value="" disabled selected><%= listing.category %></option>
+              <option>Trending</option>
+              <option>Mountains</option>
+              <option>Farm</option>
+              <option>Pools</option>
+              <option>Bed</option>
+              <option>Eco-Friendly</option>
+              <option>Beach</option>
+              <option>Arctic</option>
+              <option>Room</option>
+              <option>New</option>
+              <option>Lake sight</option>
+              <option>Flat</option>
+              <option>Forest</option>
+              <option>Boats</option>
+              <option>Fort</option>
+              
+
+            </select>
+            <div class="invalid-feedback">
+              Please select a category
+            </div>
+          </div>
+        <div class="col-mid-6">
+          <img src="<%= ogimg_url %>" alt="">
+        </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Display Image</label>
+            <br>
+            <input name="listing[imageUrl]" placeholder="Show us how your place looks" type="file" class="form-control" id="inputCity" >
+          
+          </div>
+          <div class="col-md-6">
+            <label for="inputPrice" class="form-label">Price</label>
+            <br>
+            <input name ="listing[price]" placeholder="&#x20b9;(price in INR)" type="number" class="form-control" value="<%= listing.price %>" required>
+            <div class="valid-feedback">Price looks good</div>
+            <div class="invalid-feedback">
+              Please enter a valid Price.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <br>
+            <select name="listing[location]" id="inputState" class="form-select" required >
+              <option ><%=listing.location%></option>
+              <option>Lucknow</option>
+              <option>Aspen</option>
+            </select>
+            <div class="valid-feedback">
+              State name looks good
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Country</label>
+            <br>
+            <input name="listing[country]" type="text" class="form-control" id="inputZip"  value="<%= listing.country %>" required>
+            <div class="valid-feedback">Country looks good</div>
+            <div class="invalid-feedback">
+              Please enter a valid country name.
+            </div>
+          </div>
+         
+          <div class="col-12">
+            <br>
+            <button type="submit" class="btn btn-danger" id="new">Edit</button>
+          </div>
+      
+    </form>
+
+    

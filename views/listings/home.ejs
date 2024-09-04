@@ -1,0 +1,45 @@
+<% layout("/layouts/bootstrap") %>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <% let categories = ['Trending', 'Bed', 'Farm', 'Pools', 'Mountains', 'Eco-Friendly', 'Beach', 'Arctic', 'Room', 'New', 'Lake sight', 'Flat', 'Forest', 'Boats', 'Fort']; %>
+            <% if( state =="low" ){%>
+            <% allListings.sort((a, b) => a.price - b.price); %>
+            <% }else if(state=="high"){ %>
+                <% allListings.sort((a, b) => b.price - a.price); %>
+                 <% } %>
+                 
+            <% for (let listing of allListings) { %>
+                <% if (!category || categories.includes(category) && listing.category === category) { %>
+                    
+                    <div class="col-md-4 mb-4" id="chitr">
+                        <div class="card h-100">
+                            <a href="/listings/<%= listing._id %>" class="click">
+                                <img src="<%= listing.image.url %>" class="card-img-top" id="pic" alt="...">
+                                
+                                <div class="card-img-overlay">
+                                    <i class="fa-solid fa-heart" id="heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title" id="h_ct"><%= listing.title %></h5>
+                                   
+                                    <h5 class="heading">&#x20b9;<%= listing.price.toLocaleString("en-IN") %>/night</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+
+    <script>
+        let btn1 = document.querySelectorAll("#heart");
+        btn1.forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                this.style.color = this.style.color === "red" ? "rgb(106, 106, 106)" : "red";
+            });
+        });
+    </script>
+</body>

@@ -1,0 +1,100 @@
+
+<nav class="navbar navbar-expand-md sticky-top  bg-body-light border-bottom">
+    <div class="container-fluid" id="nenav">
+        <a class="navbar-brand" href="/home"><i class="fa-regular fa-compass" id="compass"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/home" style="font-size: 25px red;" id="lo">Traveller</a>
+<div id ="sbar">
+    <form class="d-flex" role="search" id="SBAR">
+        <input class="form-control me-2" type="search" placeholder="Search your dreams !" aria-label="Search" style="outline:none !important ; border:none" id="search_box" onkeyup= "search()" >
+        <div class="dropdown" id="dl_db">
+            <button type="button" id="fil_btn"><i class="fa-solid fa-bars"></i></button>
+
+            <div class="dldbdropdown-content">
+          <h3 id="uh" class="sort"data-category="low">Price : <i class="fa-solid fa-arrow-up-wide-short"></i></h3>
+          <hr>
+          <h3 id="dh" class="sort" data-category="high">Price : <i class="fa-solid fa-arrow-down-wide-short"></i></h3>
+        </div>
+        </div>
+        <button class="btn btn-outline-success" id="sbtn" type="submit"><i class="fa-solid fa-magnifying-glass"id="sric"></i></button>
+      </form>
+</div>
+            </div>
+            <div class="navbar-nav ms-auto" id="right_nav">
+                <div id="bo">
+                <a class="nav-link" id="rnav_opt1" href="/listings/new"><i class="fa-solid fa-plus"></i> Add New Listing</a>
+            </div>
+
+            <div id = 'LS_box'>
+                <div id="ls_box">
+                
+                <% if(!currUsr){%>
+                    <div class="dropdown" id="db">
+                        <i class="fa-regular fa-user" id="pro"></i> 
+                        <div class="dropdown-content">
+                    <a class="nav-link " id="rnav_opt2" href="/signup">Sign up <i class="fa-solid fa-pen-fancy" id="pen"></i></a>
+                    <hr>
+                    <a class="nav-link" id="rnav_opt3" href="/login" >Log in <i class="fa-solid fa-pen-fancy" id="pen"></i></a>
+                    </div>
+                    </div>
+                <% } %>
+                 <% if(currUsr) {%>  
+                   
+                    <div class="dropdown" id="db">
+                        <i class="fa-regular fa-user" id="pro"></i> 
+                        <div class="dropdown-content">
+                          <a class="nav-link" href="/my">Your listings  <i class="fa-solid fa-book" id="le_nav"></i></a>
+                          <hr>
+                          <a class="nav-link" href="/logout" id="a_logout">Log out <i class="fa-solid fa-right-to-bracket" id="le_nav"></i></a>
+                        </div>
+                      </div>
+                <!-- <a class="nav-link" id="rnav_opt4" href="/logout">Log out</a> -->
+                <% } %>
+            </div>
+         
+
+        </div>   
+            </div>
+        </div>
+
+    </div>
+   <div id="line">
+    <div id="pages">
+        <i class="fa-solid fa-fire" id="nav_icon" data-category="Trending" name="f"></i>
+        <i class="fa-solid fa-bed" id="nav_icon" data-category="Bed"name="f"></i>
+        <i class="fa-solid fa-cow" id="nav_icon" data-category="Farm"name="f"></i>
+        <i class="fa-solid fa-person-swimming" id="nav_icon" data-category="Pools"name="f"></i>
+        <i class="fa-solid fa-mountain" id="nav_icon" data-category="Mountains"name="f"></i>
+        <i class="fa-solid fa-solar-panel" id="nav_icon" data-category="Eco-Friendly"name="f"></i>
+        <i class="fa-solid fa-umbrella-beach" id="nav_icon" data-category="Beach"name="f"></i>
+        <i class="fa-regular fa-snowflake" id="nav_icon" data-category="Arctic"name="f"></i>
+        <i class="fa-solid fa-people-roof" id="nav_icon" data-category="Room"name="f"></i>
+        <i class="fa-solid fa-key" id="nav_icon" data-category="New"name="f"></i>
+        <i class="fa-solid fa-water" id="nav_icon" data-category="Lake sight"name="f"></i>
+        <i class="fa-solid fa-city" id="nav_icon" data-category="Flat"name="f"></i>
+        <i class="fa-solid fa-tree" id="nav_icon" data-category="Forest"name="f"></i>
+        <i class="fa-solid fa-ship" id="nav_icon" data-category="Boats"name="f"></i>
+        <i class="fa-brands fa-fort-awesome" id="nav_icon" data-category="Fort"name="f"></i>
+    </div>
+</div>
+<script>
+    document.getElementsByName('f').forEach(icon => {
+        icon.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            window.location.href = `/home?category=${encodeURIComponent(category)}`;
+        });
+    });    
+</script>
+<script>
+let btn = document.querySelector("#fil_btn")
+let dbmenu = document.querySelector('.dldbdropdown-content')
+btn.addEventListener('click', () =>{
+dbmenu.style.display = "block";
+})    
+</script>
+</nav> 
+

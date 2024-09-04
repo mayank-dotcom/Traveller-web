@@ -1,0 +1,54 @@
+<% layout("/layouts/bootstrap") %>
+<div id="sig">
+  <div class="row-4">
+    <div class="col-8 offset-2">
+      <div class="mt-5">
+        <form action="/login" method="POST" class="needs-validation" novalidate>
+          <h1>Log In</h1>
+          <div class="mb-3">
+            <label for="exampleInputusername" class="form-label">Username</label>
+            <input name="username" type="text" class="form-control" id="exampleInputusername" placeholder="Username" required>
+            <div class="invalid-feedback">
+              Please enter a username.
+            </div>
+          </div>
+       
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <div class="input-group">
+              <input name="password" type="password" class="form-control" id="exampleInputPassword1" required>
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="eye" onclick="togglePassword()">
+                  <i class="fa-solid fa-eye-slash" id="eye1"></i>
+                </button>
+              </div>
+            </div>
+            <div id="passHelp" class="form-text">
+              Password should be at least 8-20 characters long and should contain at least one small letter, one capital letter and one special character
+            </div>
+            <div class="invalid-feedback">
+              Please enter a password.
+            </div>
+          </div>
+          <button type="submit" class="btn btn-dark">Submit</button>
+          <button class="btn btn-danger" id="su"><a href="/signup">Sign up</a></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function togglePassword(){
+      var passwordInput = document.getElementById("exampleInputPassword1");
+      var eyeIcon = document.getElementById("eye").querySelector("i");
+      if(passwordInput.type === "password"){
+          passwordInput.type = "text";
+          eyeIcon.classList.remove("fa-eye-slash");
+          eyeIcon.classList.add("fa-eye");
+      } else {
+          passwordInput.type = "password";
+          eyeIcon.classList.remove("fa-eye");
+          eyeIcon.classList.add("fa-eye-slash");
+      }
+  }
+</script>

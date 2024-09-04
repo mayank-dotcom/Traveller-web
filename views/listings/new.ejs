@@ -1,0 +1,98 @@
+<% layout("/layouts/bootstrap") %>
+
+<div class="offset-2">
+    <h1>Create a new listing</h1>
+    
+    <form action="/listings/create" method="POST" novalidate class="row g-3 needs-validation" enctype="multipart/form-data">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Title</label>
+            <br>
+            <input name="listing[title]" placeholder="Enter something catchy" type="text" class="form-control" id="inputEmail4" required>
+            <div class="valid-feedback">Title looks good</div>
+            <div class="invalid-feedback">
+              Please enter a valid title.
+            </div>
+          </div>
+         
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Description</label>
+            <br>
+            <textarea type="text" name="listing[description]" class="form-control" id="inputAddress" placeholder="What's different about it ?" required></textarea>
+            <div class="valid-feedback">Description looks good</div>
+            <div class="invalid-feedback">
+              Please enter some description.
+            </div>
+          </div>
+          <div>
+            <label for="inputCategory" class="form-label">Category</label>
+            <br>
+            <select name="listing[category]" id="inputState" class="form-select" required>
+              <option value="" disabled selected>Select a Category</option>
+              <option>Trending</option>
+              <option>Mountains</option>
+              <option>Farm</option>
+              <option>Pools</option>
+              <option>Bed</option>
+              <option>Eco-Friendly</option>
+              <option>Beach</option>
+              <option>Arctic</option>
+              <option>Room</option>
+              <option>New</option>
+              <option>Lake sight</option>
+              <option>Flat</option>
+              <option>Forest</option>
+              <option>Boats</option>
+              <option>Fort</option>
+              
+
+            </select>
+          </div>
+           <div class="col-md-6">
+            <label for="inputCity" class="form-label">Upload Image</label>
+            <br>
+            <input name="listing[imageUrl]" type="file" class="form-control" id="inputCity">
+            <div class="valid-feedback">
+              If you leave this blank we will attach a default picture to it
+             </div>
+          </div>
+      
+          <div class="col-md-6">
+            <label for="inputPrice" class="form-label">Price</label>
+            <br>
+            <input name ="listing[price]" placeholder="&#x20b9;(price in INR)" type="number" class="form-control" required>
+            <div class="valid-feedback">Price looks good</div>
+            <div class="invalid-feedback">
+              Please enter a valid Price.
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <label for="inputState" class="form-label" required>State</label>
+            <br>
+            <select name="listing[location]" id="inputState" class="form-select" required>
+              <option value="" disabled selected>Select a state</option>
+              <option>Lucknow</option>
+              <option>Aspen</option>
+              <option>New Delhi</option>
+            </select>
+            <div class="valid-feedback">State name looks good</div>
+            <div class="invalid-feedback">
+              Please enter a valid state name.
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Country</label>
+            <br>
+            <input name="listing[country]" type="text" class="form-control" id="inputZip" required>
+            <div class="valid-feedback">Country looks good</div>
+            <div class="invalid-feedback">
+              Please enter a valid country name.
+            </div>
+          </div>
+        
+          <div class="col-12">
+            <br>
+            <button type="submit" class="btn btn-danger" id="new">Add</button>
+          </div>
+    </form>
+</div>

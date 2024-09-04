@@ -1,0 +1,475 @@
+/* General reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Ensure the body takes up the full height of the viewport */
+html, body {
+  height: 220%; /* Changed from 200% to 100% */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should take the available space */
+main {
+  flex: 1 0 auto; /* Make the main content area flexible */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the footer is at the bottom */
+footer {
+  background-color: #F7F7F7;
+  padding: 1rem;
+  margin: 0rem 0rem 0rem 0rem;
+  width: 100%;
+  flex-shrink: 0;
+   height: 3rem;/* Prevent the footer from shrinking */
+}
+
+/* Navbar styles */
+.navbar {
+  height: 10rem;
+  background-color: white;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.navbar-brand {
+  color: red;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: rgb(0, 0, 0) !important;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.collapse {
+  background-color: white !important;
+}
+
+/* Flexbox for the footer container */
+footer .con {
+  height: 2rem;
+  display: flex;
+  justify-content: space-between; /* Space out the social and info sections */
+  align-items: center; /* Vertically center the items */
+}
+
+/* Styling for the social icons */
+footer .social {
+  font-size: 25px;
+}
+
+footer .social i {
+  margin-right: 1rem; /* Add space between icons */
+}
+
+/* Styling for the info links */
+footer .info a {
+  margin-right: 1rem; /* Add space between links */
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+}
+
+footer .info a:hover {
+  text-decoration: underline;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 10px;
+  flex: 1 0 40%; /* Adjust to ensure only three cards per row */
+  height: 500px; /* Increase card height */
+  border: none;
+}
+
+.card-body {
+  flex: 1; /* Make the card body take up the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: -14px;
+}
+
+.card-title {
+  font-size: 30px;
+}
+
+#h_ct {
+  font-size: 25px;
+}
+
+.page-title {
+  font-size: 30px;
+}
+
+.heading {
+  margin-bottom: 20px;
+  color: #9d9e9f;
+}
+
+.card img {
+  height: 300px; /* Increase image height */
+  width: 350px;
+  object-fit: cover;
+  border-radius: 1rem; /* Ensure the image fits well within the specified dimensions */
+}
+
+.card-text {
+  color: rgb(106, 106, 106);
+}
+
+.click {
+  text-decoration: none;
+  color: black;
+}
+#chitr
+{
+  background-color: white;
+ opacity: 1;
+}
+#chitr :hover
+{
+  
+  opacity: 0.7;
+}
+#heart {
+  margin-left: 290px;
+  font-size: 15px;
+  color: rgb(106, 106, 106);
+}
+
+#heart:hover {
+  font-size: 20px;
+}
+
+#lis {
+  margin: 5px 0px 0px 0px;
+  margin-right: 30px;
+  width: 700px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+#edit, #delet {
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+#edit {
+  margin-right: 10px;
+}
+.btn{
+  color: white;
+}
+
+#er {
+  margin-top: 90px;
+}
+
+.rev-text {
+  font-size: 30px;
+}
+
+#chat {
+  margin-top: 5px;
+}
+
+#photo {
+  width: 700px;
+}
+
+.cmt {
+  font-size: 30px;
+}
+.row{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+  margin: 0px -50px 0px 5px!important;
+}
+#rev-car{
+  border: 1px solid grey;
+  height: 190px;
+  width: 200px;
+  margin-right: 10px;
+margin-left: -5px;
+/* padding-left:5px ;
+padding-right:5px; */
+}
+#sig{
+font-size:20px;   
+}
+#eye{
+  background-color: transparent;
+  border : none;
+  margin-right: 0px ;
+}
+#eye1{
+  margin-right: 20px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+#nrev{
+  color: grey;
+}
+#map {
+  height: 200px;
+  width: 800px;
+ }
+
+ .custom-marker{
+  background-color:#222222!important;
+  
+ }
+ #right_nav{
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+ }
+ #bo{
+  border: transparent solid black;
+  box-shadow:0px 1px 1px 1px rgb(199, 198, 198) ;
+  border-radius: 20px;
+  width: 230px;
+  height: 30px;
+  margin-right: 30px;
+  padding-bottom:45px ;
+  padding-top: -2px;
+  /* margin-top : 5px; */
+ }
+ #bo:hover{
+  box-shadow:2px 2px 2px 1px rgb(199, 198, 198) ;
+  
+ }
+#rnav_opt1{
+color: #3C3C3C !important;
+  /* padding-right: 20px; */
+  margin-left: 20px;
+}
+#rnav_opt2{
+  padding-right: 20px;
+}
+#rnav_opt3{
+  padding-right: 20px;
+  padding-top: 0px;
+
+}
+#pen{
+  color: red;
+}
+#rnav_opt4{
+  padding-right: 20px;
+
+}
+#LS_box{
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+}
+#ls_box{
+  margin-right: 30px;
+  margin-top: 4px;
+text-align: center;
+border: 2px solid red;
+border-radius: 20px;
+width: 40px;
+height: 40px;
+background-color: white;
+padding-bottom: 0px;
+
+}
+
+
+#pro{
+scale: 150%;
+margin-top: 8px;
+color :red;
+cursor: pointer
+}
+
+.dropdown {
+  position: relative; /* Ensure the dropdown-content is positioned relative to this parent */
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important
+}
+
+.dropdown-content {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif!important;
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+right: 0;
+padding-bottom: 10px
+
+;
+}
+
+.dropdown-content a {
+  color: #9d9e9f;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: white;
+  height: 40px;
+  font-size: 20px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif!important;}
+
+.dropdown-content a:hover {
+  background-color: rgb(241, 231, 231);
+}
+
+#pro:hover + .dropdown-content,.dropdown-content:hover {
+  display: block;
+}
+#le_nav{
+  scale: 80%;
+  color: red;
+
+}
+#nenav{
+  margin-bottom: 80px;
+  padding-top: 15px;
+}
+#line{
+  border-top: 1px solid #d1d1d1;
+  width: 100%; /* Adjust the width as needed */
+  margin-top: 30px ; 
+  margin-right: 140px;
+  position: fixed;
+}
+#compass{
+  scale: 115%;
+}
+#lo{
+  color: red !important;
+}
+#pages{
+  padding: 0px 0px 0px 0px  ;
+  margin: 0px 0px 0px 0px;
+  position: fixed;
+  display: flex;
+}
+#nav_icon{
+  display: flex;
+  margin-top: 25px;
+  margin-left: 40px;
+  scale: 150%;
+  padding-left: 15px;
+  padding-right:15px ;
+  opacity: 0.6;
+}
+#nav_icon:hover{
+  opacity: 1;
+}
+#sbar{
+margin-left: 200px;
+  border: 1px solid transparent;
+   box-shadow:0px 1px 1px 1px rgb(199, 198, 198) ;
+  border-radius: 20px;
+  width:500px;
+  padding-top: 4px;
+  padding-left: 10px;
+  height: 50px;
+}
+#sbar:hover{
+  box-shadow:2px 2px 2px 1px rgb(199, 198, 198) ;
+
+}
+#SBAR{
+outline: none !important;
+border:none !important;
+  width: 450px;  
+  padding-right: -160px;
+  margin-left: 10px;
+}
+#sbtn{
+  background-color: #E41C57;
+  border:2px solid white;
+  border-radius: 40px;
+  margin-right:- 40px;
+  height: 40px;
+  width: 50px;
+  padding-right: -6px;
+}
+#fil_btn{
+  background-color: white;
+  color:#9d9e9f;
+  border: none;
+  margin-top:9px ;
+  scale: 110%;
+  margin-right: 16px;
+  position: relative;
+}
+#dl_db {
+  position: relative; /* Ensure the dropdown-content is positioned relative to this parent */
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important
+}
+
+.dldbdropdown-content {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif!important;
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+right: 0;
+padding:0px 0px 0px 0px ;
+height: 100px;
+width: 50px !important;
+
+}
+.dldbdropdown-content h3:hover{
+  background-color:rgb(241, 231, 231); ;
+  height: 30px;
+}
+ #uh{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif!important;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-left: 6px;
+}
+#dh{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif!important;
+  font-size: 15px;
+  padding-top: 0px;
+  padding-left: 6px;
+}
+#a_logout{
+  padding-top: 0px;
+}
+#alrev{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif!important;
+  color: black;
+}
+#alrev:hover{
+text-decoration: underline;
+}
