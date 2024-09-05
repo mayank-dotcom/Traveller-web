@@ -7,17 +7,19 @@
 }
 
 /* Ensure the body takes up the full height of the viewport */
-html, body {
+html,body {
   height: 220%; /* Changed from 200% to 100% */
   display: flex;
   flex-direction: column;
 }
+
 
 /* Main content should take the available space */
 main {
   flex: 1 0 auto; /* Make the main content area flexible */
   display: flex;
   flex-direction: column;
+
 }
 
 /* Ensure the footer is at the bottom */
@@ -37,7 +39,11 @@ footer {
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
-
+@media (max-width : 767px){
+ .navbar-toggler{
+display: none;
+}
+}
 .navbar-brand {
   color: red;
   font-size: 2rem;
@@ -53,7 +59,7 @@ footer {
   background-color: white !important;
 }
 
-/* Flexbox for the footer container */
+/* Flexbox for the footer  */
 footer .con {
   height: 2rem;
   display: flex;
@@ -93,6 +99,7 @@ footer .info a:hover {
   flex: 1 0 40%; /* Adjust to ensure only three cards per row */
   height: 500px; /* Increase card height */
   border: none;
+
 }
 
 .card-body {
@@ -161,7 +168,7 @@ footer .info a:hover {
   width: 700px;
 }
 
-.button-container {
+.button- {
   display: flex;
   align-items: center;
 }
@@ -372,6 +379,8 @@ padding-bottom: 10px
   margin: 0px 0px 0px 0px;
   position: fixed;
   display: flex;
+  background-image: url("../uploads/Untitled\ design.png")!important;
+
 }
 #nav_icon{
   display: flex;
@@ -472,4 +481,18 @@ width: 50px !important;
 }
 #alrev:hover{
 text-decoration: underline;
+}
+
+@media(max-width:1115px){
+  #right_nav{
+    visibility: collapse;
+  }
+}@media(max-width:654px){
+  footer .con .info{
+    visibility: collapse ;
+  }
+  footer .con .social{
+    visibility: collapse ;
+
+  }
 }
