@@ -1,12 +1,8 @@
-<nav class="navbar navbar-expand-md sticky-top  bg-body-light border-bottom">
+<nav class="navbar navbar-expand-md sticky-top  bg-body-light border-bottom" id="m_navbar">
     <div class="container-fluid" id="nenav">
         <a class="navbar-brand" href="/home"><i class="fa-regular fa-compass" id="compass"></i></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" href="/home" style="font-size: 25px red;" id="lo">Traveller</a>
+        <a class="nav-link" href="/home" style="font-size: 25px red;" id="lo">Traveller</a>
+
 <div id ="sbar">
     <form class="d-flex" role="search" id="SBAR">
         <input class="form-control me-2" type="search" placeholder="Search your dreams !" aria-label="Search" style="outline:none !important ; border:none" id="search_box" onkeyup= "search()" >
@@ -45,9 +41,9 @@
                    
                     <div class="dropdown" id="db">
                         <i class="fa-regular fa-user" id="pro"></i> 
-                        <div class="dropdown-content">
-                          <a class="nav-link" href="/my">Your listings  <i class="fa-solid fa-book" id="le_nav"></i></a>
-                          <hr>
+                        <div class="dropdown-content" id="op">
+                          <a class="nav-link" href="/my">Your listings  <i class="fa-solid   fa-book" id="le_nav"></i></a>
+                          <hr id="l">
                           <a class="nav-link" href="/logout" id="a_logout">Log out <i class="fa-solid fa-right-to-bracket" id="le_nav"></i></a>
                         </div>
                       </div>
@@ -78,6 +74,7 @@
         <i class="fa-solid fa-tree" id="nav_icon" data-category="Forest"name="f"></i>
         <i class="fa-solid fa-ship" id="nav_icon" data-category="Boats"name="f"></i>
         <i class="fa-brands fa-fort-awesome" id="nav_icon" data-category="Fort"name="f"></i>
+        <div id="line4"></div>
     </div>
 </div>
 <script>

@@ -1,29 +1,29 @@
 <%if(success && success.length){%>
-<div class="alert alert-success alert-dismissible fade show col-6 offset-3 " role="alert">
+<div class="alert alert-success alert-dismissible fade show col-6 offset-3 " role="alert" id="flash">
 <%= success %>
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <%}%>
 <% if(deleted && deleted.length){%>
-    <div class="alert alert-light alert-dismissible fade show col-6 offset-3" role="alert">
+    <div class="alert alert-light alert-dismissible fade show col-6 offset-3" role="alert" id="flash">
         <%= deleted %>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     <%} %>
     <% if(edited && edited.length){%>
-        <div class="alert alert-dark alert-dismissible fade show col-6 offset-3" role="alert">
+        <div class="alert alert-dark alert-dismissible fade show col-6 offset-3" role="alert" id="flash">
             <%= edited %>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         <%} %>
         <% if(rev && rev.length){%>
-            <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+            <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert" id="flash">
                 <%= rev %>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             <%} %>
             <% if(del && del.length){%>
-                <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+                <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert" id="flash">
                     <%= del %>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>

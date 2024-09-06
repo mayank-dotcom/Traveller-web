@@ -5,8 +5,8 @@ const coordinates = <%-JSON.stringify(myListing.geometry.coordinates)%>
 
 <main class="flex-grow-1">
  
-<div class="offset-3">
-  <div class="card mb-3" id="lis">
+<div class="offset-3" id="i_mcard">
+  <div class="card mb-3" id="lis" id="i_scard">
     <h1 class="page-title"><%= myListing.title %></h1>
     <img src="<%= myListing.image.url %>" class="card-img-top" alt="..." id="photo">
     <div class="card-body">
@@ -65,7 +65,7 @@ const coordinates = <%-JSON.stringify(myListing.geometry.coordinates)%>
         </div>
        
         <% if(myListing.reviews.length > 0){ %>
-        <h4 class="cmt mt-2"><a href="/listings/allrev" id="alrev">All reviews</a></h4>
+        <h4 class="cmt mt-2"> All reviews</h4>
         <div class="scrollable-div">
           <div class="row">
             <% for(review of myListing.reviews.slice(0,4)) { %>
@@ -172,7 +172,6 @@ const coordinates = <%-JSON.stringify(myListing.geometry.coordinates)%>
       // Create the marker with the custom HTML element
       new mapboxgl.Marker(customMarker)
           .setLngLat(coordinates)
-          .setPopup(new mapboxgl.Popup({offset:25}).setHTML("<h1>Hello World</h1>"))
           
           .addTo(map);
   });
