@@ -496,7 +496,7 @@ text-decoration: underline;
   }
 }
 
-@media (max-width:340px){
+@media (max-width:400px){
  
   #m_navbar{
 width: 500px;
