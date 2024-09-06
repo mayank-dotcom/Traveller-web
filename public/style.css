@@ -575,7 +575,7 @@ margin-left: 20%;
 footer{
   scale: 60%;
   width: 166%;
-  margin-left: -187px;
+  margin-left: -245px;
   margin-bottom: -5%;
   height: 10%;
 }
@@ -587,7 +587,7 @@ footer{
   
 }
 #i_scard {
-  width: 100%;
+  width: 500px;
 }
 #photo{
   height: 400px;
@@ -597,8 +597,8 @@ footer{
   width: 70%;
 }
 #map{
-  height: 40%;
-  width: 180%;
+  height: 70%;
+  width: 900px;
 }
 #new_form{
   scale: 60%;
